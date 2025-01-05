@@ -8,9 +8,9 @@
         {
         }
 
-        TState IStore<TState>.GetState()
+        TState IStore<TState>.State
         {
-            return Unlift(GetState());
+            get => Unlift(State);
         }
 
         private TState Unlift(TimeMachineState state)
